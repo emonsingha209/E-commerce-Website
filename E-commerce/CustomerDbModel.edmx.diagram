@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="dae7f399fb1a4a9da9fca1573c91c466" Name="Diagram1">
+        <EntityTypeShape EntityType="Model1.cart" Width="1.5" PointX="4.375" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.ordered" Width="1.5" PointX="5.75" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.product_catagory" Width="1.5" PointX="0.625" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.products" Width="1.5" PointX="0.5" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.users" Width="1.5" PointX="8.5" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.wishlist" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <AssociationConnector Association="Model1.FK__cart__product_id__6477ECF3" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK__cart__user_id__6383C8BA" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK__ordered__product__6A30C649" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK__ordered__user_id__693CA210" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_products_product_catagory" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK__wishlist__produc__6FE99F9F" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK__wishlist__user_i__6EF57B66" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

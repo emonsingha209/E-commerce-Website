@@ -1,0 +1,32 @@
+﻿@model IEnumerable<E_commerce.Models.Customer.CartModel>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Cart</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cart Items</h1>
+        <table class="table table-bordered">
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.Products.Product_id)</th>
+                <th>@Html.DisplayNameFor(model => model.Products.Product_name)</th>
+                <th>@Html.DisplayNameFor(model => model.Products.Product_price)</th>
+                <th>Drop</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Products.Product_id)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Products.Product_name)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Products.Product_price)</td>
+                    <td>@Html.ActionLink("Delete", "DeleteCart", new { id = item.Cart_id}, new { @class = "btn btn-primary" }) </td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

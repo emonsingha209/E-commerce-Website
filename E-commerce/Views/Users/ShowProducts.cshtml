@@ -1,0 +1,57 @@
+﻿@model IEnumerable<E_commerce.Models.Products.ProductsModel>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Select User to Update</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Products</h2>
+        <table class="table table-bordered">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Product_id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Product_name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Product_price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Product_Catagory.Catagory_name)
+                </th>
+                <th>
+                    @Html.Label("Action")
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Product_id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Product_name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Product_price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Product_Catagory.Catagory_name)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Add to cart", "SelectUserForAddCart", new { productId = item.Product_id }, new { @class = "btn btn-primary" })     
+                        @Html.ActionLink("Add to wishlist", "SelectUserForAddWishlist", new { productId = item.Product_id }, new { @class = "btn btn-success" })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</body>
+</html>

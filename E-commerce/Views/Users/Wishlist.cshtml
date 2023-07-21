@@ -1,0 +1,30 @@
+﻿@model IEnumerable<E_commerce.Models.Customer.WishlistModel>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Wishlist</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Wishlist Items</h1>
+        <table class="table table-bordered">
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.Products.Product_id)</th>
+                <th>@Html.DisplayNameFor(model => model.Products.Product_name)</th>
+                <th>@Html.DisplayNameFor(model => model.Products.Product_price)</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Products.Product_id)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Products.Product_name)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Products.Product_price)</td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Select User For Cart</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Select User to go in Cart</h2>
+        @using (Html.BeginForm("SelectUserForCart", "Users", FormMethod.Post))
+        {
+            <div class="form-group">
+                @Html.Label("Enter User ID:")
+                @Html.TextBox("userId", null, new { @class = "form-control" })
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        }
+    </div>
+</body>
+</html>
